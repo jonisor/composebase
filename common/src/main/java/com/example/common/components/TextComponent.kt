@@ -11,10 +11,5 @@ import androidx.compose.ui.Modifier
 fun TextComponent(
     text: String
 ) {
-    Surface(
-        modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colors.background
-    ) {
-        Text(text = text)
-    }
+    Text(text = text)
 }

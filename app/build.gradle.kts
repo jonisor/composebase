@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.example.composenavigation"
-    compileSdk = 33
+    compileSdk = rootProject.extra["sdkVersion"] as Int?
 
     defaultConfig {
         applicationId = "com.example.composenavigation"
-        minSdk = 26
-        targetSdk = 33
+        minSdk = rootProject.extra["minSdkVersion"] as Int?
+        targetSdk = rootProject.extra["sdkVersion"] as Int?
         versionCode = 1
         versionName = "1.0"
 

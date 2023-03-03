@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "ComposeNavigation"
-include ':app'
-include ':common'
+include(":app")
+include(":common")

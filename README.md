@@ -6,16 +6,16 @@ Using modern and clean architecture.
 
 ## Structure
 
-# Dependencies
+## Dependencies
 
 Dependencies are set from Gradle's version catalog and can be found in `gradle/libs.versions.toml`.
 
-# CI/CD
+## CI/CD
 
 Project is integrated with CircleCI.
 
-# Instrumentation tests
+## Instrumentation tests
 
 Instrumented tests, which will execute on an Android device are located under `androidTest`-folder on each module.
 
-# Unit tests
+## Unit tests

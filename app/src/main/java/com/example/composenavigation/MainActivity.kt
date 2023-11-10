@@ -3,16 +3,23 @@ package com.example.composenavigation
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.example.composenavigation.ui.screens.NavGraphs
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Modifier
+import androidx.navigation.compose.rememberNavController
+import com.example.composenavigation.navigation.AppNavigation
 import com.example.composenavigation.ui.theme.ComposeNavigationTheme
-import com.ramcosta.composedestinations.DestinationsNavHost
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            val navController = rememberNavController()
+            
             ComposeNavigationTheme {
-                DestinationsNavHost(navGraph = NavGraphs.root)
+                AppNavigation(
+                    navController = navController,
+                    modifier = Modifier.fillMaxSize()
+                )
             }
         }
     }

@@ -1,22 +1,28 @@
-import com.android.build.api.dsl.Packaging
-
+@Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
 }
+
 android {
-    namespace = "com.example.composenavigation.core.common"
+    namespace = "com.example.composenavigation.feature.latest"
     compileSdk = rootProject.extra["sdkVersion"] as Int?
 
     defaultConfig {
         minSdk = rootProject.extra["minSdkVersion"] as Int?
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
@@ -26,20 +32,24 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
     buildFeatures {
         compose = true
     }
+
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerExtension.get()
     }
-    fun Packaging.() {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
+
+    ksp {
+        arg("compose-destinations.moduleName", "latest")
+        arg("compose-destinations.mode", "destinations")
     }
 }
 
 dependencies {
-    implementation(libs.bundles.compose)
-    implementation(libs.android.activity)
+    implementation(project(":core:common"))
+
+    implementation(libs.compose.destinations)
+    ksp(libs.compose.destinations.ksp)
 }

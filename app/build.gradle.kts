@@ -36,6 +36,12 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    /*
+    ksp {
+        arg("compose-destinations.moduleName", "profile")
+        arg("compose-destinations.mode", "destinations")
+    }
+    */
     buildFeatures {
         compose = true
     }
@@ -49,16 +55,16 @@ android {
     }
 
     applicationVariants.all {
-        kotlin.sourceSets {
-            getByName(name) {
-                kotlin.srcDir("build/generated/ksp/$name/kotlin")
-            }
-        }
+        addJavaSourceFoldersToModel(
+            File(buildDir, "generated/ksp/$name/kotlin")
+        )
     }
 }
 
 dependencies {
     implementation(project(":core:common"))
+    implementation(project(":feature:home"))
+    implementation(project(":feature:latest"))
 
     implementation(libs.android.core.ktx)
     implementation(libs.android.activity)

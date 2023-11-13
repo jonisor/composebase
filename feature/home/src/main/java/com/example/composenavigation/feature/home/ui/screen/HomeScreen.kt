@@ -27,6 +27,7 @@ fun HomeScreen(
     ) {
         TextComponent(text = "Home")
         ButtonComponent(
+            text = "Navigate to latest",
             onClick = { navigator.navigateToLatest() }
         )
     }

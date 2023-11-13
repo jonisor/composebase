@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -36,12 +37,7 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-    /*
-    ksp {
-        arg("compose-destinations.moduleName", "profile")
-        arg("compose-destinations.mode", "destinations")
-    }
-    */
+    
     buildFeatures {
         compose = true
     }
@@ -68,9 +64,10 @@ dependencies {
 
     implementation(libs.android.core.ktx)
     implementation(libs.android.activity)
-
     implementation(libs.bundles.compose)
-    implementation(libs.android.activity)
+
+    implementation(libs.bundles.hilt)
+    ksp(libs.hilt.compiler)
 
     implementation(libs.compose.destinations)
     ksp(libs.compose.destinations.ksp)

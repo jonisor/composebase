@@ -5,11 +5,12 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun ButtonComponent(
+    text: String,
     onClick: () -> Unit
 ) {
     Button(
         onClick = { onClick() }
     ) {
-        TextComponent(text = "Navigate to latest")
+        TextComponent(text = text)
     }
 }

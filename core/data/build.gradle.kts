@@ -4,25 +4,19 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
 }
-
 android {
-    namespace = "com.example.composenavigation.feature.latest"
+    namespace = "com.example.composenavigation.core.data"
     compileSdk = rootProject.extra["sdkVersion"] as Int?
 
     defaultConfig {
         minSdk = rootProject.extra["minSdkVersion"] as Int?
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
     compileOptions {
@@ -32,30 +26,12 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-
-    buildFeatures {
-        compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerExtension.get()
-    }
-
-    ksp {
-        arg("compose-destinations.moduleName", "latest")
-        arg("compose-destinations.mode", "destinations")
-    }
 }
 
 dependencies {
-    implementation(project(":core:common"))
-    implementation(project(":core:data"))
-
-    implementation(libs.android.activity)
-
+    implementation((project(":core:network")))
+    implementation(libs.core.ktx)
+    implementation(libs.bundles.retrofit)
     implementation(libs.bundles.hilt)
     ksp(libs.hilt.compiler)
-
-    implementation(libs.compose.destinations)
-    ksp(libs.compose.destinations.ksp)
 }

@@ -16,6 +16,6 @@ rootProject.name = "ComposeNavigation"
 include(":app")
 include(":core:common")
 include(":feature:home")
-include(":auth")
-include(":tester")
 include(":feature:latest")
+include(":core:data")
+include(":core:network")

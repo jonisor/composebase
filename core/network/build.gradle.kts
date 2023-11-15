@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     alias(libs.plugins.android.library)
@@ -13,10 +16,22 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     buildTypes {
+        val prop = Properties().apply {
+            load(FileInputStream(project.rootProject.file("config/test.properties")))
+        }
+
+        debug {
+            buildConfigField("String", "BASE_URL", prop.getProperty("API_URL_DEBUG"))
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            buildConfigField("String", "BASE_URL", prop.getProperty("API_URL_RELEASE"))
         }
     }
     compileOptions {

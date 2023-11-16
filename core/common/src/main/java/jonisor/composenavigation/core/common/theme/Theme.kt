@@ -1,4 +1,4 @@
-package jonisor.common.theme
+package jonisor.composenavigation.core.common.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
@@ -40,7 +40,7 @@ fun ComposeNavigationTheme(
 
     MaterialTheme(
         colors = colors,
-        typography = Typography,
+        typography = CustomTypography,
         shapes = Shapes,
         content = content
     )

@@ -9,8 +9,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
-import jonisor.common.components.ButtonComponent
-import jonisor.common.components.TextComponent
+import jonisor.composenavigation.core.common.components.ButtonComponent
+import jonisor.composenavigation.core.common.components.TextComponent
 import jonisor.composenavigation.feature.latest.ui.viewmodel.LatestViewModel
 import com.ramcosta.composedestinations.annotation.Destination
 

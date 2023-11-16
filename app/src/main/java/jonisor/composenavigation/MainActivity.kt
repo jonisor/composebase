@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.navigation.compose.rememberNavController
 import jonisor.composenavigation.navigation.AppNavigation
-import jonisor.common.theme.ComposeNavigationTheme
+import jonisor.composenavigation.core.common.theme.ComposeNavigationTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

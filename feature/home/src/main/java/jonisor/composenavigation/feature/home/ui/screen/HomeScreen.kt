@@ -6,8 +6,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import jonisor.common.components.ButtonComponent
-import jonisor.common.components.TextComponent
+import jonisor.composenavigation.core.common.components.ButtonComponent
+import jonisor.composenavigation.core.common.components.TextComponent
 import com.ramcosta.composedestinations.annotation.Destination
 
 interface HomeScreenNavigator {

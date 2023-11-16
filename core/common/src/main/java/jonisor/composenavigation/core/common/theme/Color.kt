@@ -1,4 +1,4 @@
-package jonisor.common.theme
+package jonisor.composenavigation.core.common.theme
 
 import androidx.compose.ui.graphics.Color
 

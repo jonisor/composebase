@@ -72,10 +72,7 @@ dependencies {
     implementation(libs.compose.destinations)
     ksp(libs.compose.destinations.ksp)
 
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.1.1")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.1.1")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.1.1")
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.bundles.test.android)
+    debugImplementation(libs.bundles.test.debug)
 }

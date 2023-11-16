@@ -58,4 +58,7 @@ dependencies {
 
     implementation(libs.compose.destinations)
     ksp(libs.compose.destinations.ksp)
+
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.bundles.test.android)
 }

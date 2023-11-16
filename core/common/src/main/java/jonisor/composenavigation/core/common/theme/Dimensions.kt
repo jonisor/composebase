@@ -6,6 +6,7 @@ import androidx.compose.ui.unit.dp
 
 data class Dimensions(
     val paddingRegular: Dp = 16.dp,
+    val paddingLarge: Dp = 20.dp
 )
 
 internal val LocalDimensions = staticCompositionLocalOf { Dimensions() }

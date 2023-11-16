@@ -42,14 +42,6 @@ fun LatestScreen(
                 onClick = { navigator.popBackStack() },
                 title = stringResource(id = R.string.SCREEN_LATEST_TITLE)
             )
-        },
-        bottomBar = {
-            Box(modifier = Modifier.padding(AppTheme.dimensions.paddingRegular)) {
-                ButtonComponent(
-                    text = stringResource(id = R.string.SCREEN_LATEST_BUTTON_TITLE),
-                    onClick = { /* TODO: */ }
-                )
-            }
         }
     ) {
         Column(

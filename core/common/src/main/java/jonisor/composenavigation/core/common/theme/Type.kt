@@ -48,7 +48,13 @@ val CustomTypography = Typography(
     h6 = TextStyle(
         fontFamily = specialFontFamily,
         fontWeight = FontWeight.Bold,
-        fontSize = 42.sp,
-        lineHeight = 48.sp
+        fontSize = 48.sp,
+        lineHeight = 64.sp
+    ),
+    subtitle1 = TextStyle(
+        fontFamily = defaultFontFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 20.sp,
+        lineHeight = 24.sp
     )
 )

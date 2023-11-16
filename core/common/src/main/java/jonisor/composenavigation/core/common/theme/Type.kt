@@ -16,6 +16,10 @@ val defaultFontFamily = FontFamily(
     Font(R.font.nunitosans_regular, FontWeight.Normal)
 )
 
+val specialFontFamily = FontFamily(
+    Font(R.font.hughs)
+)
+
 val CustomTypography = Typography(
     body1 = TextStyle(
         fontFamily = defaultFontFamily,
@@ -40,5 +44,11 @@ val CustomTypography = Typography(
         fontWeight = FontWeight.Bold,
         fontSize = 20.sp,
         lineHeight = 24.sp
+    ),
+    h6 = TextStyle(
+        fontFamily = specialFontFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 42.sp,
+        lineHeight = 48.sp
     )
 )

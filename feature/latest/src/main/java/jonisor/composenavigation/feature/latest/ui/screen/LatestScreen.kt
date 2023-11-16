@@ -16,6 +16,7 @@ import jonisor.composenavigation.core.common.components.ButtonComponent
 import jonisor.composenavigation.core.common.components.TextComponent
 import jonisor.composenavigation.feature.latest.ui.viewmodel.LatestViewModel
 import com.ramcosta.composedestinations.annotation.Destination
+import jonisor.composenavigation.core.common.components.TopBarComponent
 import jonisor.composenavigation.core.common.theme.AppTheme
 import jonisor.composenavigation.feature.latest.R
 
@@ -36,11 +37,17 @@ fun LatestScreen(
     }
 
     Scaffold(
+        topBar = {
+            TopBarComponent(
+                onClick = { navigator.popBackStack() },
+                title = stringResource(id = R.string.SCREEN_LATEST_TITLE)
+            )
+        },
         bottomBar = {
             Box(modifier = Modifier.padding(AppTheme.dimensions.paddingRegular)) {
                 ButtonComponent(
                     text = stringResource(id = R.string.SCREEN_LATEST_BUTTON_TITLE),
-                    onClick = { navigator.popBackStack() }
+                    onClick = { /* TODO: */ }
                 )
             }
         }
@@ -50,10 +57,7 @@ fun LatestScreen(
                 .fillMaxSize()
                 .padding(AppTheme.dimensions.paddingRegular)
         ) {
-            TextComponent(
-                text = stringResource(id = R.string.SCREEN_LATEST_TITLE),
-                style = MaterialTheme.typography.h4
-            )
+
         }
     }
 }

@@ -44,7 +44,7 @@ fun HomeScreen(
         ) {
             TextComponent(
                 text = stringResource(id = R.string.SCREEN_HOME_TITLE),
-                style = MaterialTheme.typography.h4
+                style = MaterialTheme.typography.h6
             )
         }
     }

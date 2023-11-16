@@ -1,4 +1,4 @@
-package jonisor.composenavigation.ui.theme
+package jonisor.common.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

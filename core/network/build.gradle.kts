@@ -8,7 +8,7 @@ plugins {
     alias(libs.plugins.ksp)
 }
 android {
-    namespace = "com.example.composenavigation.core.network"
+    namespace = "jonisor.composenavigation.core.network"
     compileSdk = rootProject.extra["sdkVersion"] as Int?
 
     defaultConfig {

@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.composenavigation.feature.latest"
+    namespace = "jonisor.composenavigation.feature.latest"
     compileSdk = rootProject.extra["sdkVersion"] as Int?
 
     defaultConfig {

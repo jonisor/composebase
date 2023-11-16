@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.ksp)
 }
 android {
-    namespace = "com.example.composenavigation.core.data"
+    namespace = "jonisor.composenavigation.core.data"
     compileSdk = rootProject.extra["sdkVersion"] as Int?
 
     defaultConfig {

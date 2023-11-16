@@ -1,4 +1,4 @@
-package jonisor.composenavigation.feature.latest
+package jonisor.composenavigation.feature.home
 
 import org.junit.Test
 

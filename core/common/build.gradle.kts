@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
 }
 android {
-    namespace = "com.example.composenavigation.core.common"
+    namespace = "jonisor.composenavigation.core.common"
     compileSdk = rootProject.extra["sdkVersion"] as Int?
 
     defaultConfig {

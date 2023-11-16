@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.composenavigation"
+    namespace = "jonisor.composenavigation"
     compileSdk = rootProject.extra["sdkVersion"] as Int?
 
     defaultConfig {
-        applicationId = "com.example.composenavigation"
+        applicationId = "jonisor.composenavigation"
         minSdk = rootProject.extra["minSdkVersion"] as Int?
         targetSdk = rootProject.extra["sdkVersion"] as Int?
         versionCode = 1

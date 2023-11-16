@@ -34,5 +34,11 @@ val CustomTypography = Typography(
         fontWeight = FontWeight.Bold,
         fontSize = 16.sp,
         lineHeight = 20.sp
+    ),
+    h4 = TextStyle(
+        fontFamily = defaultFontFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 20.sp,
+        lineHeight = 24.sp
     )
 )

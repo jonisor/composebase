@@ -19,11 +19,11 @@ fun ButtonComponent(
         onClick = { onClick() },
         modifier = Modifier.fillMaxWidth(),
         border = BorderStroke(
-          width = 1.dp,
+          width = 1.5.dp,
           color = Color.Black
         ),
         colors = ButtonDefaults.buttonColors(
-            backgroundColor = Color.Yellow
+            backgroundColor = MaterialTheme.colors.primary
         )
     ) {
         TextComponent(

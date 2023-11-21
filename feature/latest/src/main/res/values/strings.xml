@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="SCREEN_LATEST_TITLE">Latest</string>
+    <string name="SCREEN_LATEST_TITLE">Latest ads from artists</string>
     <string name="SCREEN_LATEST_BUTTON_TITLE">Return home</string>
+    <string name="SCREEN_LATEST_ADD_USER">Create new user</string>
 </resources>

@@ -42,4 +42,5 @@ android {
 dependencies {
     implementation(libs.bundles.compose)
     implementation(libs.android.activity)
+    implementation(libs.coil.compose)
 }

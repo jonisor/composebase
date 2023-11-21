@@ -1,22 +1,49 @@
 package jonisor.composenavigation.feature.latest.ui.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
-import jonisor.composenavigation.core.data.repository.TestRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import androidx.lifecycle.viewModelScope
+import jonisor.composenavigation.core.data.model.ArtistAd
+import jonisor.composenavigation.core.data.model.User
+import jonisor.composenavigation.core.data.repository.AdRepository
+import jonisor.composenavigation.core.data.repository.UserRepository
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+
+data class LatestUiState(
+    val artistsAds: List<ArtistAd>? = emptyList()
+)
 
 @HiltViewModel
 class LatestViewModel @Inject constructor(
-    private val testRepository: TestRepository
+    private val userRepository: UserRepository,
+    private val adRepository: AdRepository
 ): ViewModel() {
+    private val _uiState = MutableStateFlow(LatestUiState())
+    val uiState: StateFlow<LatestUiState> = _uiState.asStateFlow()
 
-    fun initialise() {
+    init {
         viewModelScope.launch {
-            val temp = testRepository.getTest()
-            Log.d("TESTING", temp.toString())
+            val artistsAds = adRepository.getArtistsAds()
+
+            _uiState.update {
+                it.copy(
+                    artistsAds = artistsAds
+                )
+            }
+        }
+    }
+
+    fun addUser() {
+        viewModelScope.launch {
+            val randomId = java.util.UUID.randomUUID().toString()
+            val user = User(id = randomId, name = "New User" )
+
+            userRepository.addUser(user)
         }
     }
 }

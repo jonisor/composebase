@@ -10,6 +10,10 @@ Using modern and clean architecture.
 
 Dependencies are set from Gradle's version catalog and can be found in `gradle/libs.versions.toml`.
 
+## Service
+
+Project is currently integrated with local test server implemented in SpringBoot and Kotlin.
+
 ## CI/CD
 
 Project is integrated with CircleCI.

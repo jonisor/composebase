@@ -4,22 +4,26 @@ import jonisor.composenavigation.feature.home.ui.screen.destinations.HomeScreenD
 import jonisor.composenavigation.feature.latest.ui.screen.destinations.LatestScreenDestination
 import com.ramcosta.composedestinations.spec.DestinationSpec
 import com.ramcosta.composedestinations.spec.NavGraphSpec
+import jonisor.composenavigation.feature.latest.ui.screen.destinations.ArtistAdScreenDestination
 
 object NavGraphs {
-
-    val latest = object : NavGraphSpec {
-        override val route: String = "profile"
-        override val startRoute = LatestScreenDestination
-        override val destinationsByRoute: Map<String, DestinationSpec<*>>
-            get() = listOf<DestinationSpec<*>>(LatestScreenDestination)
-                .associateBy { it.route }
-    }
 
     val home = object : NavGraphSpec {
         override val route: String = "home"
         override val startRoute = HomeScreenDestination
         override val destinationsByRoute: Map<String, DestinationSpec<*>>
             get() = listOf<DestinationSpec<*>>(HomeScreenDestination)
+                .associateBy { it.route }
+    }
+
+    val latest = object : NavGraphSpec {
+        override val route: String = "latest"
+        override val startRoute = LatestScreenDestination
+        override val destinationsByRoute: Map<String, DestinationSpec<*>>
+            get() = listOf<DestinationSpec<*>>(
+                LatestScreenDestination,
+                ArtistAdScreenDestination
+            )
                 .associateBy { it.route }
     }
 

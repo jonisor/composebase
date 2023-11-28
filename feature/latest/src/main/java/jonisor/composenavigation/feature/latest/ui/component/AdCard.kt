@@ -1,5 +1,6 @@
 package jonisor.composenavigation.feature.latest.ui.component
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -18,11 +19,15 @@ import jonisor.composenavigation.core.common.theme.AppTheme
 import jonisor.composenavigation.core.data.model.ArtistAd
 
 @Composable
-fun AdCard(ad: ArtistAd) {
+fun AdCard(
+    ad: ArtistAd,
+    onClick: (String) -> Unit
+) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .padding(bottom = AppTheme.dimensions.paddingRegular)
+            .clickable { onClick(ad.id) }
     ) {
         Row {
             Box(modifier = Modifier.padding(AppTheme.dimensions.paddingRegular)) {

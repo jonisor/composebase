@@ -1,7 +1,6 @@
 package jonisor.composenavigation.feature.latest.ui.screen
 
 import android.annotation.SuppressLint
-import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,7 +9,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
@@ -28,6 +26,7 @@ import jonisor.composenavigation.feature.latest.ui.component.AdCard
 interface LatestScreenNavigator {
     fun popBackStack()
     fun navigateToHomeScreen()
+    fun navigateToArtistAdScreen(id: String)
 }
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
@@ -39,12 +38,6 @@ fun LatestScreen(
 ) {
     val uiState by latestViewModel.uiState.collectAsState()
 
-    LaunchedEffect(uiState.artistsAds) {
-        uiState.artistsAds?.map {
-            Log.d("TESTING", it.toString())
-        }
-    }
-
     Scaffold(
         topBar = {
             TopBarComponent(
@@ -55,8 +48,8 @@ fun LatestScreen(
         bottomBar = {
             Box(modifier = Modifier.padding(AppTheme.dimensions.paddingRegular)) {
                 ButtonComponent(
-                    text = stringResource(id = R.string.SCREEN_LATEST_ADD_USER),
-                    onClick = { latestViewModel.addUser() }
+                    text = stringResource(id = R.string.SCREEN_LATEST_ADD_AD),
+                    onClick = { /**/ }
                 )
             }
         }
@@ -77,7 +70,10 @@ fun LatestScreen(
                         }
                     }
                     items(uiState.artistsAds!!.size) {
-                        AdCard(ad = uiState.artistsAds!![it])
+                        AdCard(
+                            ad = uiState.artistsAds!![it],
+                            onClick = navigator::navigateToArtistAdScreen
+                        )
                     }
                 }
             }

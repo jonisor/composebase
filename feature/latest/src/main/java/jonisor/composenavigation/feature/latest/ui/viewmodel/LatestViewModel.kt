@@ -5,9 +5,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import androidx.lifecycle.viewModelScope
 import jonisor.composenavigation.core.data.model.ArtistAd
-import jonisor.composenavigation.core.data.model.User
 import jonisor.composenavigation.core.data.repository.AdRepository
-import jonisor.composenavigation.core.data.repository.UserRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -20,7 +18,6 @@ data class LatestUiState(
 
 @HiltViewModel
 class LatestViewModel @Inject constructor(
-    private val userRepository: UserRepository,
     private val adRepository: AdRepository
 ): ViewModel() {
     private val _uiState = MutableStateFlow(LatestUiState())
@@ -37,7 +34,7 @@ class LatestViewModel @Inject constructor(
             }
         }
     }
-
+    /*
     fun addUser() {
         viewModelScope.launch {
             val randomId = java.util.UUID.randomUUID().toString()
@@ -46,4 +43,5 @@ class LatestViewModel @Inject constructor(
             userRepository.addUser(user)
         }
     }
+    */
 }

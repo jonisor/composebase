@@ -19,4 +19,13 @@ class AdRepository @Inject constructor(
             return null
         }
     }
+
+    suspend fun getArtistsAd(id: String): ArtistAd? {
+        return try {
+            adService.getAd(id)
+        } catch (e: Exception) {
+            e.message?.let { Log.d("TESTING", it) }
+            return null
+        }
+    }
 }

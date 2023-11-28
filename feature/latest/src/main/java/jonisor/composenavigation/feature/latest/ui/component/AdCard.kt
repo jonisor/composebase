@@ -13,7 +13,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import jonisor.composenavigation.core.common.components.CustomImage
+import jonisor.composenavigation.core.common.components.ImageComponent
 import jonisor.composenavigation.core.common.components.TextComponent
 import jonisor.composenavigation.core.common.theme.AppTheme
 import jonisor.composenavigation.core.data.model.ArtistAd
@@ -31,7 +31,7 @@ fun AdCard(
     ) {
         Row {
             Box(modifier = Modifier.padding(AppTheme.dimensions.paddingRegular)) {
-                ad.imageUrl?.let { CustomImage(imageUrl = it) }
+                ad.imageUrl?.let { ImageComponent(imageUrl = it) }
             }
             Column {
                 TextComponent(

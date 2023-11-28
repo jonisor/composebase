@@ -12,7 +12,7 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 
 @Composable
-fun CustomImage(
+fun ImageComponent(
     imageUrl: String,
     contentScale: ContentScale = ContentScale.FillWidth
 ) {

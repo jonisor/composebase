@@ -89,15 +89,22 @@ fun ArtistAdScreen(
                         }
                         if (ad.targetArea?.isEmpty() == false) {
                             val targets = StringBuilder()
-                            ad.targetArea!!.map {
-                                targets
-                                    .append(it.value.lowercase())
-                                    .append(" ")
+                            ad.targetArea!!.mapIndexed { index, area ->
+                                targets.append(area.value.lowercase())
+                                if (index < ad.targetArea!!.size.minus(1)) {
+                                    targets.append(", ")
+                                }
                             }
 
                             AdItem(
                                 field = R.string.SCREEN_AD_ITEM_TARGET_AREA,
                                 value = targets.toString()
+                            )
+                        }
+                        uiState.artist?.let {
+                            AdItem(
+                                field = R.string.SCREEN_AD_ITEM_ARTIST,
+                                value = it.name
                             )
                         }
                     }

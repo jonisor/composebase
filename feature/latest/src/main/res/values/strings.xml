@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="SCREEN_AD_ITEM_ARTIST">Artist:</string>
     <string name="SCREEN_AD_ITEM_COST">Estimated cost:</string>
     <string name="SCREEN_AD_ITEM_DURATION">Estimated duration:</string>
     <string name="SCREEN_AD_ITEM_TARGET_AREA">Target area:</string>

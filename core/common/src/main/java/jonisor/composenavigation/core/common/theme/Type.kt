@@ -29,15 +29,21 @@ val CustomTypography = Typography(
     ),
     body2 = TextStyle(
         fontFamily = defaultFontFamily,
-        fontWeight = FontWeight.Normal,
-        fontSize = 14.sp,
-        lineHeight = 16.sp
+        fontWeight = FontWeight.Bold,
+        fontSize = 16.sp,
+        lineHeight = 20.sp
     ),
     button = TextStyle(
         fontFamily = defaultFontFamily,
         fontWeight = FontWeight.Bold,
         fontSize = 16.sp,
         lineHeight = 20.sp
+    ),
+    h3 = TextStyle(
+        fontFamily = specialFontFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 32.sp,
+        lineHeight = 44.sp
     ),
     h4 = TextStyle(
         fontFamily = defaultFontFamily,

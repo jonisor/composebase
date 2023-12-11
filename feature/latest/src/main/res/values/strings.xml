@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="SCREEN_AD_ITEM_COST">Estimated cost:</string>
+    <string name="SCREEN_AD_ITEM_DURATION">Estimated duration:</string>
+    <string name="SCREEN_AD_ITEM_TARGET_AREA">Target area:</string>
     <string name="SCREEN_LATEST_TITLE">Latest ads from artists</string>
     <string name="SCREEN_LATEST_BUTTON_TITLE">Return home</string>
     <string name="SCREEN_LATEST_ADD_AD">Create new ad</string>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="SCREEN_HOME_TITLE">Home of tattoos</string>
-    <string name="SCREEN_HOME_SUBTITLE">Welcome to connect between clients and artists</string>
+    <string name="SCREEN_HOME_SUBTITLE">Welcome to connect between artists and clients</string>
     <string name="SCREEN_HOME_BUTTON_TITLE">Navigate to latest</string>
+    <string name="SCREEN_HOME_BOTTOM_LATEST_AD_ARTIST">Latest artist ads</string>
+    <string name="SCREEN_HOME_BOTTOM_LATEST_AD_CLIENT">Latest client ads</string>
 </resources>

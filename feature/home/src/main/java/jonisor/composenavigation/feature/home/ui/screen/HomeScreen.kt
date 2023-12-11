@@ -16,6 +16,7 @@ import jonisor.composenavigation.core.common.components.TextComponent
 import com.ramcosta.composedestinations.annotation.Destination
 import jonisor.composenavigation.core.common.theme.AppTheme
 import jonisor.composenavigation.feature.home.R
+import jonisor.composenavigation.feature.home.ui.component.BottomComponent
 import jonisor.composenavigation.feature.home.ui.component.TopComponent
 
 interface HomeScreenNavigator {
@@ -34,12 +35,7 @@ fun HomeScreen(
             TopComponent()
         },
         bottomBar = {
-            Box(modifier = Modifier.padding(AppTheme.dimensions.paddingRegular)) {
-                ButtonComponent(
-                    text = stringResource(id = R.string.SCREEN_HOME_BUTTON_TITLE),
-                    onClick = { navigator.navigateToLatest() }
-                )
-            }
+            BottomComponent(navigator)
         }
     ) {
         Column(

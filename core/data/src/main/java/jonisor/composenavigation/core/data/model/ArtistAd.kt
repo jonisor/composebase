@@ -8,5 +8,6 @@ data class ArtistAd(
     val estimateDuration: Int? = null,
     val estimateCost: Int? = null,
     val targetArea: List<TargetArea>? = emptyList(),
+    val targetRegion: List<TargetRegion>,
     val artistId: String
 )

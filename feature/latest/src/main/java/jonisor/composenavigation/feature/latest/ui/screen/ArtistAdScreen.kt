@@ -101,6 +101,12 @@ fun ArtistAdScreen(
                                 value = targets.toString()
                             )
                         }
+                        ad.targetRegion.map {
+                            AdItem(
+                                field = R.string.SCREEN_AD_ITEM_TARGET_REGION,
+                                value = it.value
+                            )
+                        }
                         uiState.artist?.let {
                             AdItem(
                                 field = R.string.SCREEN_AD_ITEM_ARTIST,

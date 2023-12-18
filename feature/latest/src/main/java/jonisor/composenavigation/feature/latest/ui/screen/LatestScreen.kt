@@ -42,7 +42,7 @@ fun LatestScreen(
         topBar = {
             TopBarComponent(
                 onClick = { navigator.popBackStack() },
-                title = "Return home"
+                title = "Back"
             )
         },
         bottomBar = {

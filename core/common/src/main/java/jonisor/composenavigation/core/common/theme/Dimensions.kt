@@ -9,7 +9,8 @@ data class Dimensions(
     val paddingExtraSmall: Dp = 8.dp,
     val paddingSmall: Dp = 12.dp,
     val paddingRegular: Dp = 16.dp,
-    val paddingLarge: Dp = 20.dp
+    val paddingLarge: Dp = 20.dp,
+    val paddingExtraLarge: Dp = 24.dp
 )
 
 internal val LocalDimensions = staticCompositionLocalOf { Dimensions() }

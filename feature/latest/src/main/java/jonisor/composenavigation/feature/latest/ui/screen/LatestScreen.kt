@@ -42,16 +42,8 @@ fun LatestScreen(
         topBar = {
             TopBarComponent(
                 onClick = { navigator.popBackStack() },
-                title = "Back"
+                title = "Ads from artists"
             )
-        },
-        bottomBar = {
-            Box(modifier = Modifier.padding(AppTheme.dimensions.paddingRegular)) {
-                ButtonComponent(
-                    text = stringResource(id = R.string.SCREEN_LATEST_ADD_AD),
-                    onClick = { /**/ }
-                )
-            }
         }
     ) {
         Column(
@@ -64,7 +56,7 @@ fun LatestScreen(
                     item {
                         Box(modifier = Modifier.padding(bottom = AppTheme.dimensions.paddingRegular)) {
                             TextComponent(
-                                text = stringResource(id = R.string.SCREEN_LATEST_TITLE),
+                                text = stringResource(id = R.string.SCREEN_LATEST_LIST_TITLE),
                                 style = MaterialTheme.typography.subtitle1
                             )
                         }

@@ -3,6 +3,9 @@
     <string name="SCREEN_HOME_TITLE">Home of tattoos</string>
     <string name="SCREEN_HOME_SUBTITLE">Welcome to connect between artists and clients</string>
     <string name="SCREEN_HOME_BUTTON_TITLE">Navigate to latest</string>
-    <string name="SCREEN_HOME_BOTTOM_LATEST_AD_ARTIST">Latest artist ads</string>
-    <string name="SCREEN_HOME_BOTTOM_LATEST_AD_CLIENT">Latest client ads</string>
+    <string name="MENU_TITLE">Menu</string>
+    <string name="MENU_ITEM_HOME">Home</string>
+    <string name="MENU_ITEM_ADS_ARTIST">Artist ads</string>
+    <string name="MENU_ITEM_ADS_CLIENT">Client ads</string>
+    <string name="MENU_ITEM_PROFILE">Profile</string>
 </resources>

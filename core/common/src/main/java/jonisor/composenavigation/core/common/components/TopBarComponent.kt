@@ -40,7 +40,7 @@ fun TopBarComponent(
     ) {
         TextComponent(
             text = title,
-            style = MaterialTheme.typography.subtitle1
+            style = MaterialTheme.typography.h3
         )
     }
 }
